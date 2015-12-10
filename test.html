@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"  />
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>zepto.error.js</title>
+	<style type="text/css">
+		input,button{
+			width: 80%;
+			display: block;
+			height: 20px;
+			padding: 5px 0;
+			margin: 20px auto;
+		}
+		button{
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<input class="js-error js-error-null" js-error-prompt="第一个输入框不能为空">
+	<input class="js-error js-error-email" js-error-prompt="第二个输入框不是邮箱">
+	<button onclick="errorTest(true)">submit</button>
+	<button onclick="errorTest(false)">submit without prompt</button>
+</body>
+<script type="text/javascript" src="./js/zepto.min.js"></script>
+<script type="text/javascript" src="./js/zepto.error.js"></script>
+<script type="text/javascript">
+	function errorTest (prompt) {
+		var result = $("body").checkError({prompt_show: prompt})
+		console.log(result)
+	}
+</script>
+</html>
