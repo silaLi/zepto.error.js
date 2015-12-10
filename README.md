@@ -26,7 +26,6 @@ $("body").checkError({
 
 ####检测方法太少不能满足项目？没关系
 ~~~~javascript
-//
 $.addCheckFn({
 	"js-error-XXX": function(){
 		//我们需要在这里书写我们自己验证方式，并返回一个boolean值
