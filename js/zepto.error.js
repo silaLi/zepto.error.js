@@ -66,7 +66,6 @@
 			"js-error-email": {fn: isMail},
 			"js-error-phone": {fn: isPhone},
 			"js-error-idcard": {fn: isIdCard},
-			"js-error-height": {fn: isSuitHeight}
 		},
 		prompt_show: true,
 		prompt: function(option) {
@@ -102,17 +101,6 @@
 	$("body").append(prompt_div);
 
 	//----------以下全是验证方法----------
-	function isSuitHeight(val_fn) {
-		var height_val = ~~this.val();
-		var maxHeight = 220;
-		var minHeight = 150;
-		if (minHeight <= height_val && height_val <= maxHeight) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
 	function isNull(next) {
 		var val = this.val();
 		if (val && val != "") {
