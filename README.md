@@ -13,8 +13,8 @@ $("body").checkError()
 //这样它会只检验页面中有js-error-null和js-error-email标记的元素
 $("body").checkError({
 	only_check: {
-		js-error-null:true,
-		js-error-email:true
+		"js-error-null":true,
+		"js-error-email":true
 	}
 })
 
